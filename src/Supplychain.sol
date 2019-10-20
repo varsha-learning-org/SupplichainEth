@@ -29,11 +29,6 @@ contract PurchasesOrder{
     function CreateOrder(string memory productName, int productQuantity) public{
         orderID = orderID+1;
         orders[orderID] = Order(productName, productQuantity, msg.sender, State.Created);
-        test[orderID]=true;
-
-        if(test[orderID]){
-                // do something
-        }
     }
 
     function GetOrdersState(uint orderNumber) public view returns (State){
